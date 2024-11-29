@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/getGameNameByAppIds", async function (req, res, next) {
-    const appIds = req.query.appIds?.split(',')?.map(parseInt).filter(Boolean);
+    const appIds = req.query.appIds?.split(',')?.map(app => parseInt(app)).filter(Boolean);
 
     res.json({
         results: await collection.SteamApp.find({
