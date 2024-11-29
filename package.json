@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.7",
+    "cors": "^2.8.5",
     "cron": "^3.2.1",
     "debug": "~4.3.7",
     "discord-control": "^1.0.34",

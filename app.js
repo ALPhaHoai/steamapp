@@ -5,9 +5,11 @@ import indexRouter from "./routes/index.js";
 import {connect} from "./db.js";
 import {initial} from "./core.js";
 import {sleep} from "steamutils/utils.js";
+import cors from "cors";
 
 const app = express();
 
+app.use(cors())
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
